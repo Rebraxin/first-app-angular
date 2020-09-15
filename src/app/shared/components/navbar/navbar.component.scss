@@ -37,9 +37,7 @@
         padding-right: 20px;
       }
       .nav-link {
-        // optional
         text-align: center;
-        // main
         display: block;
         font-size: 1rem;
         padding: 0 2rem;
@@ -62,7 +60,6 @@
       .nav-toggler {
         // optional
         display: block;
-        // main
         float: right;
         width: 40px;
         height: 18px;
@@ -70,7 +67,6 @@
         background: none;
         border: none;
         outline: none;
-        // display: none;
         opacity: 0.8;
       }
     }
@@ -84,20 +80,36 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   :host {
-    .header-main {
-      .header-nav {
-
+    .header-nav {
+      .nav-container {
+        .nav-link {
+          display: inline-block;
+        }
+        .nav-collapse {
+          float: right;
+        }
+        .nav-toggler {
+          display: none;
+        }
       }
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  :host {
-  }
-}
-
 @media screen and (min-width: 1024px) {
   :host {
+    .header-nav {
+      .nav-container {
+        .nav-link {
+          display: inline-block;
+        }
+        .nav-collapse {
+          float: right;
+        }
+        .nav-toggler {
+          display: none;
+        }
+      }
+    }
   }
 }
