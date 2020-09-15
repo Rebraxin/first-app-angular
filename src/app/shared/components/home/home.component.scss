@@ -1,9 +1,7 @@
 :host {
   .home-main {
-    padding-top: 59px;
-    background-color: rgb(11, 0, 36);
-    padding-bottom: 3rem;
-    width: 100%;
+    padding-top: 60px;
+    background-color: #0f2038;
     .image-wrapper {
       width: 100%;
       height: 400px;
@@ -15,23 +13,58 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.2);
+        background-color: rgba($color: #000000, $alpha: 0.5);
         z-index: 0;
       }
+      .banner-content {
+        position: absolute;
+        height: 100%;
+        color: rgba($color: #ffffff, $alpha: 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 20px;
+        .banner-title {
+          text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.75);
+          margin-bottom: 10px;
+          text-align: right;
+        }
+        .banner-text {
+          text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.75);
+          width: 80%;
+          text-align: right;
+          margin-bottom: 10px;
+        }
+        .banner-btn {
+          text-decoration: none;
+          color: rgba($color: #ffffff, $alpha: 0.8);
+          background-color: rgb(11, 0, 36);
+          padding: 10px 30px;
+          border-radius: 20px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
       .banner-img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    .angular-icon {
-      display: block;
-      width: 75px;
-      height: auto;
-      margin: 3rem auto;
+    .wrapper-angular-icon {
+      padding: 2rem 0;
+      .angular-icon {
+        display: block;
+        width: 75px;
+        height: auto;
+        margin: auto;
+      }
     }
     .home-separator {
-      width: 40px;
+      width: 50px;
       height: 5px;
       background: rgba($color: #ffffff, $alpha: 0.25);
       border-radius: 5px;
@@ -40,49 +73,36 @@
     .home-paragraph {
       color: rgba($color: #ffffff, $alpha: 0.75);
       text-align: center;
-      margin: 2rem auto;
-      width: 90%;
-      max-width: 920px;
+      padding: 2rem 20px;
     }
     .home-used-tools {
       color: rgba($color: #ffffff, $alpha: 0.75);
       text-align: center;
-      margin-bottom: 2rem;
-      padding-top: 2rem;
+      padding: 2rem 0;
     }
     .home-tools-container {
-      padding: 2rem 0;
+      padding: 0rem 20px 2rem;
+      color: rgba($color: #ffffff, $alpha: 0.75);
       .home-tools {
-        width: 90%;
-        max-width: 920px;
-        display: flex;
-        margin: auto;
-        padding: 1rem 0;
         .tools-content {
-          color: rgba($color: #ffffff, $alpha: 0.75);
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          padding: 1rem;
+          padding-top: 2rem;
         }
-        .tools-content > h4 {
-          margin-bottom: 1rem;
-          font-size: 1.25rem;
+        .tools-content > h3 {
+          border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.5);
+          padding-bottom: 20px;
+          margin-bottom: 20px;
         }
       }
     }
   }
-  @media screen and (max-width: 850px) {
-    .home-tools-container {
-      .home-tools {
-        flex-direction: column;
-        .tools-image {
-          display: block;
-          margin: auto;
-          width: 300px;
-          height: auto;
-        }
-      }
-    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :host {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
   }
 }

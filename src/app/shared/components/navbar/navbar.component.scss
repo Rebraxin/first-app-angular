@@ -14,7 +14,7 @@
     overflow: hidden;
     transition: height 0.4s ease-in-out;
     .nav-container {
-      max-width: 980px;
+      max-width: 1024px;
       margin: 0 auto;
       .nav-brand,
       .nav-link {
@@ -35,12 +35,14 @@
       }
       .nav-toggler {
         padding-right: 20px;
-        background-color: transparent;
       }
       .nav-link {
+        // optional
+        text-align: center;
+        // main
+        display: block;
         font-size: 1rem;
         padding: 0 2rem;
-        z-index: 0;
         position: relative;
         transition: all 0.2s ease-in-out;
         &.selected,
@@ -54,9 +56,13 @@
         cursor: pointer;
       }
       .nav-collapse {
-        float: right;
+        // float: right;
+        float: none;
       }
       .nav-toggler {
+        // optional
+        display: block;
+        // main
         float: right;
         width: 40px;
         height: 18px;
@@ -64,14 +70,14 @@
         background: none;
         border: none;
         outline: none;
-        display: none;
+        // display: none;
         opacity: 0.8;
       }
     }
   }
   &.active {
     .header-nav {
-      height: 100vh;
+      height: 47vh;
     }
   }
 }
@@ -86,27 +92,12 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   :host {
-    .header-main {
-      .header-nav {
-        .nav-container {
-          .nav-collapse,
-          .nav-link {
-            float: none;
-            display: block;
-          }
-          .nav-link {
-            text-align: center;
-            &::before {
-              display: none;
-            }
-          }
-          .nav-toggler {
-            display: block;
-          }
-        }
-      }
-    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
   }
 }

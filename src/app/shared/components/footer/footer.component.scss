@@ -1,77 +1,34 @@
 :host {
   .footer-main {
     background-color: rgb(11, 0, 36);
-    border-top: 1px solid #1f1f41;
-    padding: 2rem;
+    border-top: 1px solid #292958;
+    padding: 2rem 20px;
     .footer-container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      .footer-section {
-        width: 33%;
-        padding: 1rem;
-        .footer-title,
-        .footer-content,
-        .footer-separator {
+      .footer-content {
+        color: rgba($color: #ffffff, $alpha: 0.75);
+        text-align: center;
+        margin-bottom: 20px;
+        & > a {
+          color: rgba($color: #ffffff, $alpha: 1);
+        }
+      }
+      .footer-signature {
+        display: flex;
+        justify-content: center;
+        & > p {
           color: rgba($color: #ffffff, $alpha: 0.75);
         }
-        .footer-separator {
-          padding: 16px 0;
-        }
-        .footer-title {
-          padding-bottom: 10px;
-          margin-bottom: 20px;
-          border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.75);
-        }
-        .footer-content,
-        .footer-separator {
-          font-size: 0.9rem;
-        }
-        .footer-list {
-          list-style: none;
-          .footer-item {
-            margin: 4px 0;
-            .footer-link {
-              text-decoration: none;
-              color: rgba($color: #ffffff, $alpha: 0.75);
-              transition: all 0.2s ease-in-out;
-              &:hover {
-                color: rgba($color: #ffffff, $alpha: 1.0);
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-
-      }
-    }
-
-  }
-  @media screen and (max-width: 1023px) {
-    .footer-main {
-      padding: 2rem 1rem;
-      .footer-container {
-        flex-flow: column;
-        padding: 0;
-        .footer-section {
-          width: 100%;
-          max-width: 400px;
-          margin: 0 auto;
-        }
       }
     }
   }
-  .footer-signature {
-    color: rgba($color: #ffffff, $alpha: 0.75);
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #0B1728;
-    span {
-      font-weight: 700;
-    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :host {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
   }
 }
