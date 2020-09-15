@@ -1,0 +1,8 @@
+{
+  "id": 10,
+  "name": "string",
+  "origin": "string",
+  "img": "string",
+  "appellations": "string",
+  "description": "string"
+}

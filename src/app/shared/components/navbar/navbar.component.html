@@ -1,0 +1,46 @@
+<header class="header-main" [ngClass]="{ 'navbar-fixed': isFixedNavbar }">
+  <nav class="header-nav">
+    <div class="nav-container">
+      <a class="nav-item nav-brand" routerLink="home">Angular</a>
+
+      <button (click)="toggleNavbar()" class="nav-toggler">
+        <mat-icon class="nav-icon">{{
+          !navbarOpened ? "menu" : "close"
+        }}</mat-icon>
+      </button>
+      <div class="nav-collapse">
+        <a
+          class="nav-item nav-link"
+          routerLink="home"
+          routerLinkActive="selected"
+          (click)="toggleOffNavbar()"
+          >Accueil</a
+        >
+
+        <a
+          class="nav-item nav-link"
+          routerLink="birds"
+          routerLinkActive="selected"
+          (click)="toggleOffNavbar()"
+          >Oiseaux</a
+        >
+
+        <a
+          class="nav-item nav-link"
+          routerLink="poissons"
+          routerLinkActive="selected"
+          (click)="toggleOffNavbar()"
+          >Poissons</a
+        >
+
+        <a
+          class="nav-item nav-link"
+          routerLink="contact"
+          routerLinkActive="selected"
+          (click)="toggleOffNavbar()"
+          >Contact</a
+        >
+      </div>
+    </div>
+  </nav>
+</header>

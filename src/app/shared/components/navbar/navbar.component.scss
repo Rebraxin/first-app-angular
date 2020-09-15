@@ -1,0 +1,118 @@
+:host {
+  .header-main {
+    z-index: 9999;
+    border-bottom: 1px solid #1f1f41;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    // &.navbar-fixed {
+    //   position: fixed;
+    //   left: 0;
+    //   top: 0;
+    //   right: 0;
+    // }
+  }
+  .header-nav {
+    background: rgb(11, 0, 36);
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+    .nav-container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      .nav-brand,
+      .nav-link {
+        display: inline-block;
+        color: rgba($color: #ffffff, $alpha: 0.75);
+        text-decoration: none;
+        line-height: 60px;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: rgba($color: #ffffff, $alpha: 1);
+        }
+      }
+      .nav-brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      .nav-link {
+        font-size: 1rem;
+        z-index: 0;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        &.selected,
+        &:hover {
+          color: rgba($color: #ffffff, $alpha: 1);
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: rgba($color: #ffffff, $alpha: 1);
+          left: 0;
+          bottom: 18px;
+          transform: scaleY(0);
+          transition: all 0.2s ease-in-out;
+          transform-origin: right;
+          // z-index: -1;
+        }
+        &:hover::before,
+        &.selected::before {
+          transform: scaleY(1);
+        }
+      }
+      .nav-icon {
+        color: rgba($color: #ffffff, $alpha: 0.75);
+        cursor: pointer;
+      }
+      .nav-collapse {
+        float: right;
+      }
+      .nav-toggler {
+        float: right;
+        width: 40px;
+        height: 18px;
+        margin: 18.5px 0;
+        background: none;
+        border: none;
+        outline: none;
+        display: none;
+        opacity: 0.8;
+      }
+    }
+  }
+  &.active {
+    .header-nav {
+      height: 100vh;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  :host {
+    .header-nav {
+      .nav-container {
+        .nav-collapse,
+        .nav-link {
+          float: none;
+          display: block;
+        }
+        .nav-link {
+          text-align: center;
+          &::before {
+            display: none;
+          }
+        }
+        .nav-toggler {
+          display: block;
+        }
+      }
+    }
+  }
+}

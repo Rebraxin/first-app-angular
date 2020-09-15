@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "first-app-angular-a592f"
+  },
+  "targets": {
+    "first-app-angular-a592f": {
+      "hosting": {
+        "first-app-angular": [
+          "first-app-angular-a592f"
+        ]
+      }
+    }
+  }
+}
