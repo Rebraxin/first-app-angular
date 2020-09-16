@@ -13,7 +13,7 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.5);
+        background-color: rgba($color: #000000, $alpha: 0.2);
         z-index: 0;
       }
       .banner-content {
@@ -43,6 +43,7 @@
           background-color: rgb(11, 0, 36);
           padding: 10px 30px;
           border-radius: 20px;
+          border: 2px solid rgba($color: #ffffff, $alpha: 0.25);
           &:hover {
             text-decoration: underline;
           }
@@ -66,7 +67,7 @@
     .home-separator {
       width: 50px;
       height: 5px;
-      background: rgba($color: #ffffff, $alpha: 0.25);
+      background: rgba($color: #05daff, $alpha: 0.25);
       border-radius: 5px;
       margin: auto;
     }
@@ -78,15 +79,43 @@
       padding: 2rem 20px;
     }
     .home-used-tools {
-      color: rgba($color: #ffffff, $alpha: 0.75);
+      color: #05daff;
       text-align: center;
-      padding: 2rem 0;
+      padding: 2rem 20px;
+    }
+    .home-card-container {
+      padding: 2rem 20px 2.5rem;
+      color: rgba($color: #ffffff, $alpha: 0.75);
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+      .card-content {
+        & > h3 {
+          margin: 10px 0 20px 0;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.75);
+        }
+        & > p {
+          margin-bottom: 30px;
+        }
+        & > a {
+          text-decoration: none;
+          color: rgba($color: #ffffff, $alpha: 0.75);
+          background-color: rgb(11, 0, 36);
+          padding: 10px 20px;
+          border-radius: 20px;
+          border: 1px solid rgba($color: #ffffff, $alpha: 0.75);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
     .home-tools-container {
       padding: 0rem 20px 2rem;
       max-width: 1024px;
       margin: auto;
-      // width: 100%;
       color: rgba($color: #ffffff, $alpha: 0.75);
       .home-tools {
         .tools-content {
@@ -115,6 +144,28 @@
       }
       .home-paragraph {
         padding: 2rem 40px;
+      }
+      .home-card-container {
+        display: flex;
+        & > img {
+          flex: 0.4;
+        }
+        .card-content {
+          flex: 0.6;
+          padding-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & > h3 {
+            margin: 0;
+          }
+          & > p {
+            margin: 0;
+          }
+          & > a {
+            align-self: flex-start;
+          }
+        }
       }
       .home-tools-container {
         padding: 0rem 40px 2rem;
@@ -147,15 +198,46 @@
         }
       }
       .home-paragraph {
-        padding: 2rem 40px;
+        padding: 0 40px 2.5rem;
+      }
+      .home-used-tools {
+        padding: 2.5rem;
+      }
+      .home-card-container {
+        max-width: 1024px;
+        padding: 3rem 20px 3.5rem;
+        margin: auto;
+        display: flex;
+        & > img {
+          flex: 0.4;
+        }
+        .card-content {
+          flex: 0.6;
+          padding-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & > h3 {
+            margin: 0;
+          }
+          & > p {
+            margin: 0;
+          }
+          & > a {
+            align-self: flex-start;
+          }
+        }
       }
       .home-tools-container {
-        padding: 0rem 40px 2rem;
+        padding-bottom: 4rem;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         .home-tools {
           width: 30%;
+          .tools-content {
+            padding-top: 3rem;
+          }
         }
       }
     }
