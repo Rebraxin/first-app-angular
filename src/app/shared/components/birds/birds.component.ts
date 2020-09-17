@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { DatabaseService } from '../../services/database/database.service';
 
 @Component({
   selector: 'app-birds',
@@ -7,10 +7,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./birds.component.scss'],
 })
 export class BirdsComponent implements OnInit {
-  birds$;
-  constructor(private afs: AngularFirestore) { }
+  public birds: any = [];
+  constructor(private _dbs: DatabaseService) { }
 
   ngOnInit(): void {
-    this.birds$ = this.afs.collection('birds', (ref) => ref.orderBy('position')).valueChanges();
+    this.birds = this._dbs.getBirds$();
   }
 }

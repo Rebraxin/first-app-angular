@@ -5,7 +5,7 @@
   <h2 class="birds-list-title">Notre Top 10 des plus beaux oiseaux du monde</h2>
   <div class="birds-separator"></div>
   <div class="birds-list-container">
-    <ul *ngFor="let bird of birds$ | async" class="birds-list">
+    <ul *ngFor="let bird of birds | async" class="birds-list">
       <li class="birds-item">
         <a class="birds-link" [routerLink]="['/birds', bird.slug]"
           >{{ bird.position }}. {{ bird.name }}</a

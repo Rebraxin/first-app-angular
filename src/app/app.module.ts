@@ -15,6 +15,7 @@ import { ContactComponent } from './shared/components/contact/contact.component'
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { BirdsComponent } from './shared/components/birds/birds.component';
 import { BirdDetailComponent } from './shared/components/bird-detail/bird-detail.component';
+import { DatabaseService } from './shared/services/database/database.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { BirdDetailComponent } from './shared/components/bird-detail/bird-detail
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

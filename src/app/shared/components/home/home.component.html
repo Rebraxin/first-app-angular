@@ -1,12 +1,20 @@
 <div class="home-main">
   <div class="image-wrapper">
     <div class="banner-content">
-      <h2 class="banner-title">En savoir plus sur moi ?</h2>
-      <p class="banner-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-        sunt expedita, veniam, quasi provident dolor magnam temporibus tempore.
-      </p>
-      <a href="https://portfolio-1f413.web.app/" target="_blank" class="banner-btn">En savoir plus</a>
+      <div>
+        <h2 class="banner-title">Un de mes principaux points fort ?</h2>
+        <p class="banner-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+          sunt expedita, veniam, quasi provident dolor magnam temporibus
+          tempore.
+        </p>
+        <a
+          href="https://portfolio-1f413.web.app/"
+          target="_blank"
+          class="banner-btn"
+          >En savoir plus</a
+        >
+      </div>
     </div>
     <img class="banner-img" src="../../assets/images/home-banner.png" alt="" />
   </div>
@@ -27,21 +35,29 @@
     ces données.
   </p>
   <div class="home-separator"></div>
-  <h2 class="home-used-tools">Bienvenue sur mon Top 10 Osieaux & Poissons </h2>
+  <h2 class="home-used-tools">Bienvenue sur mon Top 10 Osieaux & Poissons</h2>
   <div class="home-separator"></div>
   <div class="home-card-container">
-    <img src="../../../../assets/images/home/home-bird.png" alt="">
+    <img src="../../../../assets/images/home/home-bird.png" alt="" />
     <div class="card-content">
       <h3>Notre sélection d'oiseaux</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur architecto doloribus nesciunt repellendus nostrum blanditiis exercitationem ad! Itaque, sunt.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+        aspernatur architecto doloribus nesciunt repellendus nostrum blanditiis
+        exercitationem ad! Itaque, sunt.
+      </p>
       <a href="#">Découvrir</a>
     </div>
   </div>
   <div class="home-card-container">
-    <img src="../../../../assets/images/home/home-fish.png" alt="">
+    <img src="../../../../assets/images/home/home-fish.png" alt="" />
     <div class="card-content">
       <h3>Notre sélection de poissons</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur architecto doloribus nesciunt repellendus nostrum blanditiis exercitationem ad! Itaque, sunt.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+        aspernatur architecto doloribus nesciunt repellendus nostrum blanditiis
+        exercitationem ad! Itaque, sunt.
+      </p>
       <a href="#">Découvrir</a>
     </div>
   </div>
@@ -49,67 +65,11 @@
   <h2 class="home-used-tools">Outils utilisés</h2>
   <div class="home-separator"></div>
   <div class="home-tools-container">
-    <div class="home-tools">
+    <div class="home-tools" *ngFor="let tool of tools | async">
       <div class="tools-content">
-        <h3>Angular Routing & Navigation</h3>
+        <h3>{{ tool.name }}</h3>
         <p>
-          Le fonctionnement de cet outils est senssiblement similaire a celui de
-          React (React-router-dom). On peut match sur l'exact URL, faire de la
-          redirection et aussi reconnaitre le lien actif, toujours très ultile
-          pour styliser les differents états du composant.
-        </p>
-      </div>
-    </div>
-    <div class="home-tools">
-      <div class="tools-content">
-        <h3>Angular HTTP</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas
-          voluptate minus ullam, odit dolores aliquid, amet neque tenetur,
-          temporibus adipisci et numquam tempore quis autem error? Vel qui
-          cupiditate magnam deleniti quasi dignissimos ullam corrupti id sit nam
-          rem eos fugit ab voluptas dolore, explicabo omnis eum rerum soluta?
-        </p>
-      </div>
-    </div>
-    <div class="home-tools">
-      <div class="tools-content">
-        <h3>Angular Material</h3>
-        <p>
-          Je n'ai pas pu explorer cette librairie de composants et d'icons a son
-          maximum. D'après ce que j'ai pu observer, cela ressemble beaucoup a
-          Semantic-UI, ReactStrap pour React. Sans réelles surprises mais très
-          fiable et bien documenté.
-        </p>
-      </div>
-    </div>
-    <div class="home-tools">
-      <div class="tools-content">
-        <h3>Firebase</h3>
-        <p>
-          Mon application est hébergé sur Firebase. J'ai fait ce choix pour ses
-          facilitées de déployement, sa stabilité et aussi car le service est
-          totalement gratuit pour des petits projet en version démo.
-        </p>
-      </div>
-    </div>
-    <div class="home-tools">
-      <div class="tools-content">
-        <h3>Firebase</h3>
-        <p>
-          Mon application est hébergé sur Firebase. J'ai fait ce choix pour ses
-          facilitées de déployement, sa stabilité et aussi car le service est
-          totalement gratuit pour des petits projet en version démo.
-        </p>
-      </div>
-    </div>
-    <div class="home-tools">
-      <div class="tools-content">
-        <h3>Firebase</h3>
-        <p>
-          Mon application est hébergé sur Firebase. J'ai fait ce choix pour ses
-          facilitées de déployement, sa stabilité et aussi car le service est
-          totalement gratuit pour des petits projet en version démo.
+          {{ tool.description }}
         </p>
       </div>
     </div>
