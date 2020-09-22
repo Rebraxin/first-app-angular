@@ -10,7 +10,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './shared/components/home/home.component';
-import { ContactComponent } from './shared/components/contact/contact.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { BirdsComponent } from './shared/components/birds/birds.component';
 import { DatabaseService } from './shared/services/database/database.service';
@@ -20,7 +19,6 @@ import { DatabaseService } from './shared/services/database/database.service';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ContactComponent,
     FooterComponent,
     BirdsComponent
   ],
