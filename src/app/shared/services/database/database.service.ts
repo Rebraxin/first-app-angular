@@ -16,7 +16,21 @@ export class DatabaseService {
       .valueChanges();
   }
 
-  getTools$(): Observable<ITools[]>  {
+  getTools$(): Observable<ITools[]> {
     return this.database.collection<ITools>('tools').valueChanges();
+  }
+
+  addUser$(): any {
+    return this.database
+      .collection('users')
+      .add({
+        id: '123123',
+      })
+      .then(function () {
+        console.log('Document successfully written!');
+      })
+      .catch(function (error) {
+        console.error('Error writing document: ', error);
+      });
   }
 }

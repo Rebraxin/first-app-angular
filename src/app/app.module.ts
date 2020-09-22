@@ -10,11 +10,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './shared/components/home/home.component';
-import { FishesComponent } from './shared/components/fishes/fishes.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { BirdsComponent } from './shared/components/birds/birds.component';
-import { BirdDetailComponent } from './shared/components/bird-detail/bird-detail.component';
 import { DatabaseService } from './shared/services/database/database.service';
 
 @NgModule({
@@ -22,11 +20,9 @@ import { DatabaseService } from './shared/services/database/database.service';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FishesComponent,
     ContactComponent,
     FooterComponent,
-    BirdsComponent,
-    BirdDetailComponent
+    BirdsComponent
   ],
   imports: [
     BrowserModule,

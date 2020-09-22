@@ -1,63 +1,39 @@
 :host {
   .birds-main {
-    padding-top: 59px;
-    background-color: rgb(11, 0, 36);
-    padding-bottom: 3rem;
-    width: 100%;
-    .image-wrapper {
+    padding-top: 60px;
+    padding-bottom: 2rem;
+    background-color: #0f2038;
+    .birds-container {
       width: 100%;
-      height: 400px;
-      background-color: #000;
-      position: relative;
-      &::before {
-        position: absolute;
-        content: "";
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.3);
-        z-index: 0;
-      }
-      .banner-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 30%;
-      }
-    }
-    .birds-list-title {
-      color: rgba($color: #ffffff, $alpha: 0.75);
-      text-align: center;
-      padding: 2rem 0;
-    }
-    .birds-separator {
-      width: 40px;
-      height: 5px;
-      background: rgba($color: #ffffff, $alpha: 0.25);
-      border-radius: 5px;
-      margin: auto;
-    }
-    .birds-list-container {
-      padding: 2rem 0;
-      .birds-list {
-        font-weight: 700;
-        letter-spacing: 0.05rem;
-        text-align: center;
-        .birds-item {
-          margin: 0.8rem 0;
-          .birds-link {
-            text-decoration: none;
-            color: rgba($color: #ffffff, $alpha: 0.75);
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s ease-in-out;
-            &:hover {
-              color: rgba($color: #ffffff, $alpha: 1.0);
-              border-bottom: 1px solid rgba($color: #ffffff, $alpha: 1.0);
-            }
+      height: 100%;
+      margin: 1rem auto;
+      .birds-card-wrapper {
+        padding: 20px 0;
+        .image-wrapper {
+          width: 100%;
+          padding: 10px 20px;
+          position: relative;
+          & > img {
+            width: 100%;
+            height: auto;
           }
         }
       }
+
+      .content-wrapper {
+        padding: 0 20px;
+        color: rgba($color: #ffffff, $alpha: 0.75);
+      }
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :host {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :host {
   }
 }

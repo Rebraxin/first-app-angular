@@ -1,0 +1,20 @@
+[debug] [2020-09-17T18:35:21.804Z] ----------------------------------------------------------------------
+[debug] [2020-09-17T18:35:21.805Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2020-09-17T18:35:21.805Z] CLI Version:   8.10.0
+[debug] [2020-09-17T18:35:21.805Z] Platform:      linux
+[debug] [2020-09-17T18:35:21.805Z] Node Version:  v12.18.3
+[debug] [2020-09-17T18:35:21.806Z] Time:          Thu Sep 17 2020 20:35:21 GMT+0200 (Central European Summer Time)
+[debug] [2020-09-17T18:35:21.806Z] ----------------------------------------------------------------------
+[debug] [2020-09-17T18:35:21.806Z] 
+[debug] [2020-09-17T18:35:21.810Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-17T18:35:21.810Z] > authorizing via signed-in user
+[debug] [2020-09-17T18:35:21.810Z] [iam] checking project first-app-angular-a592f for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-09-17T18:35:21.812Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-09-17T18:35:21.812Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-09-17T18:35:22.111Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 17 Sep 2020 18:35:22 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-17T18:35:22.121Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/first-app-angular-a592f:testIamPermissions  
+ {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-09-17T18:35:22.946Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 17 Sep 2020 18:35:22 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=578","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-17T18:35:22.950Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/first-app-angular-a592f  
+ 
