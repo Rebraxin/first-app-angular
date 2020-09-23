@@ -80,6 +80,9 @@
       margin: auto;
       text-align: center;
       padding: 2rem 20px;
+      & > span {
+        color: #05daff;
+      }
     }
     .home-used-tools {
       color: #05daff;
